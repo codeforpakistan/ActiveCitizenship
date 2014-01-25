@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+	<title>AIR - Premium Bootstrap Admin Template (v1.1)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<!-- Bootstrap -->
+	<link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	
+	<!-- Bootstrap Extended -->
+	<link href="../../bootstrap/extend/jasny-bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet">
+	<link href="../../bootstrap/extend/jasny-bootstrap/css/jasny-bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="../../bootstrap/extend/bootstrap-wysihtml5/css/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet">
+
+	<!-- Select2 -->
+	<link rel="stylesheet" href="../../theme/scripts/select2/select2.css"/>
+	
+	<!-- JQueryUI v1.9.2 -->
+	<link rel="stylesheet" href="../../theme/scripts/jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.custom.min.css" />
+	
+	<!-- Glyphicons -->
+	<link rel="stylesheet" href="../../theme/css/glyphicons.css" />
+	
+	<!-- Bootstrap Extended -->
+	<link rel="stylesheet" href="../../bootstrap/extend/bootstrap-select/bootstrap-select.css" />
+	<link rel="stylesheet" href="../../bootstrap/extend/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css" />
+	
+	<!-- Uniform -->
+	<link rel="stylesheet" media="screen" href="../../theme/scripts/pixelmatrix-uniform/css/uniform.default.css" />
+
+	<!-- JQuery v1.8.2 -->
+	<script src="../../theme/scripts/jquery-1.8.2.min.js"></script>
+	
+	<!-- Modernizr -->
+	<script src="../../theme/scripts/modernizr.custom.76094.js"></script>
+	
+	<!-- MiniColors -->
+	<link rel="stylesheet" media="screen" href="../../theme/scripts/jquery-miniColors/jquery.miniColors.css" />
+	
+	<!-- google-code-prettify -->
+	<link href="../../theme/scripts/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Theme -->
+	<link rel="stylesheet" href="../../theme/css/style.min.css?1363027690" />
+	
+	<!-- LESS 2 CSS -->
+	<script src="../../theme/scripts/less-1.3.3.min.js"></script>
+	
+</head>
+<body>
+	
+		
+	<!-- Start Content -->
+	<div class="container-fluid fixed left-menu">
+		
+				
+		<div id="content">
+		
+		<!-- Documentation -->
+<section class="documentation">
+	<div class="row-fluid">
+		<div class="span9">
+				
+			<!-- Documentation CONTENT -->
+			<h1>Getting Started</h1>
+<hr class="separator bottom" />
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="../../documentation/getting-started/files.html?lang=en&amp;menu_position=left-menu" title="">What's in the package</a></li>
+	<li><a href="../../documentation/getting-started/config.html?lang=en&amp;menu_position=left-menu" title="">Configuration</a></li>
+	<li><a href="../../documentation/getting-started/lang.html?lang=en&amp;menu_position=left-menu" title="">Translations</a></li>
+</ul>
+
+<h3>What's in the package</h3>
+<hr class="separator bottom" />
+<p>AIR is released in 2 versions:</p>
+<ul>
+	<li><strong>PHP version:</strong> offers a good base for PHP implementations</li>
+	<li><strong>HTML version:</strong> for a clean start from scratch implementation or non-PHP implementations.
+</ul><br/>
+
+<h4>Differences between PHP &amp; HTML versions</h4>
+<hr class="separator bottom" />
+<p>Each version has it's advantages and choosing one over the other depends of how you will want to implement it. For example, you may want to start a new project from scratch or use a framework like Zend or Cake, or maybe you don't want to use PHP at all and use some other scripting language and you don't want to spend precious time cleaning up PHP parts you don't need, in this case you'll want to use the clean HTML version.</p>
+<p>However, if you don't have much experience with scripting languages like PHP or never used a framework like Zend or Cake PHP, AIR's PHP version offers a good base, yet simple for starting your implementation, with examples of a minimal structure, file templating - header, pages, footer - reusable functions, etc.</p>
+<p>Most of the features are available in both versions, with the following exceptions:</p>
+<ul>
+	<li><strong>Translate System</strong> - only available in PHP version</li>
+	<li><strong>Easy configurable theme &amp; layout options</strong> - only available in PHP version / in HTML version you will have to modify the markup yourself as needed</li>
+</ul>
+
+<h3>Main structure</h3>
+<hr class="separator bottom" />
+<pre class="prettyprint lang-html">
+/ 						// Root Directory
+&lt;php|html&gt;/					// AIR HTML/PHP versions
+	bootstrap/ 				// Twitter Bootstrap
+	documentation/				// Documentation
+	theme/ 					// Theme Directory
+		css/ 				// Default LESS/CSS files
+		fonts/				// Fonts
+		images/				// Default Images
+		scripts/			// Scripts
+		skins/				// Skins
+			css/&lt;skin&gt;.css 		// Skin CSS files
+			less/&lt;skin&gt;.less 	// Skin LESS files
+</pre>
+
+<h3>CSS Files</h3>
+<hr class="separator bottom" />
+<p>AIR uses couple of stylesheets to control visual apperance. There are stylesheets from Twitter Bootstrap, default theme stylesheets, skin stylesheets, and plugin stylesheets.</p>
+
+<pre class="prettyprint lang-html">
+bootstrap/css/<strong>&lt;file&gt;</strong>.css 		// Twitter Bootstrap Stylesheets
+theme/css/<strong>&lt;file&gt;</strong>.css 			// Default Stylesheets
+theme/skins/css/<strong>&lt;skin&gt;</strong>.css 		// Skin Stylesheets
+theme/scripts/<strong>&lt;plugin&gt;</strong>/css/<strong>&lt;file&gt;</strong>.css 	// Plugin stylesheets
+</pre>
+
+<h3>LESS is MORE</h3>
+<hr class="separator bottom" />
+<p>First of all, you may ask: <strong>What the <code>&lt;beep&gt;</code> is LESS?</strong> Well, LESS is The dynamic stylesheet language.</p>
+<p>LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. LESS runs on both the client-side (Chrome, Safari, Firefox) and server-side, with Node.js and Rhino, but for our purpose, we will use the client-side <em>less.js</em> compiler for FAST and SMART deveopment and for production, we'll convert and minify the LESS files to the regular CSS by using a local compiler, like WinLess.</p>
+
+<h3>The LESS files</h3>
+<hr class="separator bottom" />
+<pre class="prettyprint lang-html">
+theme/less/<strong>mixins</strong>.less 			// Common Mixins
+theme/less/<strong>style</strong>.less 			// Default Stylesheet
+theme/skins/less/<strong>&lt;skin&gt;</strong>.less 		// Skin Stylesheet
+</pre>
+
+<p>Don't worry! If you never worked with LESS before, we assure you it's not that big of a step from CSS. Actually, after you start working LESS, you'll never look back. Also, it has a really great <a href="http://lesscss.org/" class="no-js">documentation</a>.</p>
+
+<h3>Scripts</h3>
+<hr class="separator bottom" />
+<p>
+	AIR uses many 3rd party plugins &amp; scripts, as well as custom
+	ones. There are scripts from Twitter Bootstrap, jQuery &amp; plugins,
+	Modernizr, custom scripts, etc. They are all located in
+	<code>theme/scripts/</code>. 
+	For more information about external scripts reffer to <a
+		href="../../documentation/credits.html?lang=en&amp;menu_position=left-menu"
+		class="glyphicons single share"><i></i>Credits</a>
+</p>
+			<!-- Documentation CONTENT END -->
+				
+		</div>
+		<div class="span3">
+			<div class="widget widget-2 primary widget-body-white">
+				<div class="widget-head">
+					<h4 class="heading glyphicons circle_question_mark"><i></i> Documentation</h4>
+				</div>
+				<div class="widget-body list list-2">
+					<ul>
+						<li><a href="../../documentation.html?lang=en&amp;menu_position=left-menu" title="" class="glyphicons link"><i></i>Overview</a></li>
+						<li class="hasSubmenu active">
+							<a href="../../documentation/getting-started/files.html?lang=en&amp;menu_position=left-menu" title="" class="glyphicons link"><i></i>Getting Started</a>
+							<ul>
+								<li class="active"><a href="../../documentation/getting-started/files.html?lang=en&amp;menu_position=left-menu" title="">What's in the package</a></li>
+								<li><a href="../../documentation/getting-started/config.html?lang=en&amp;menu_position=left-menu" title="">Configuration</a></li>
+								<li><a href="../../documentation/getting-started/lang.html?lang=en&amp;menu_position=left-menu" title="">Translations</a></li>
+							</ul>
+						</li>
+						<li class="hasSubmenu">
+							<a href="../../documentation/customization-guide/grid-system.html?lang=en&amp;menu_position=left-menu" title="" class="glyphicons link"><i></i>Customization Guide</a>
+							<ul>
+								<li><a href="../../documentation/customization-guide/grid-system.html?lang=en&amp;menu_position=left-menu" title="">Grid System</a></li>
+								<li><a href="../../documentation/customization-guide/buttons.html?lang=en&amp;menu_position=left-menu" title="">Buttons</a></li>
+								<li><a href="../../documentation/customization-guide/icons.html?lang=en&amp;menu_position=left-menu" title="">Icons</a></li>
+								<li><a href="../../documentation/customization-guide/tables.html?lang=en&amp;menu_position=left-menu" title="">Tables</a></li>
+								<li><a href="../../documentation/customization-guide/widgets.html?lang=en&amp;menu_position=left-menu" title="">Widgets</a></li>
+								<li><a href="../../documentation/customization-guide/tabs.html?lang=en&amp;menu_position=left-menu" title="">Tabs</a></li>
+								<li><a href="../../documentation/customization-guide/elements.html?lang=en&amp;menu_position=left-menu" title="">Other</a></li>
+							</ul>
+						</li>
+						<li><a href="../../documentation/credits.html?lang=en&amp;menu_position=left-menu" title="" class="glyphicons link"><i></i>Credits</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Documentation END -->		
+				
+		</div>
+		</div>		
+	</div>
+	
+		<!-- Themer -->
+	<div id="themer" class="collapse themer-sidebar">
+		<div class="wrapper">
+			<span class="close2">&times; close</span>
+			<h4>Themer <span>color</span></h4>
+			<ul>
+				<li>Theme: <select id="themer-theme" class="pull-right"></select><div class="clearfix"></div></li>
+				<li>Primary Color: <input type="text" data-type="minicolors" data-default="#ffffff" data-slider="hue" data-textfield="false" data-position="left" id="themer-primary-cp" /><div class="clearfix"></div></li>
+				<li>
+					<span class="link" id="themer-custom-reset">reset theme</span>
+					<span class="pull-right"><label>advanced <input type="checkbox" value="1" id="themer-advanced-toggle" /></label></span>
+				</li>
+			</ul>
+			<div id="themer-getcode" class="hide">
+				<div class="separator"></div>
+				<button class="btn btn-primary btn-small pull-right btn-icon glyphicons download" id="themer-getcode-less"><i></i>Get LESS</button>
+				<button class="btn btn-inverse btn-small pull-right btn-icon glyphicons download" id="themer-getcode-css"><i></i>Get CSS</button>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+		
+	<!-- JQueryUI v1.9.2 -->
+	<script src="../../theme/scripts/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+	
+	<!-- JQueryUI Touch Punch -->
+	<!-- small hack that enables the use of touch events on sites using the jQuery UI user interface library -->
+	<script src="../../theme/scripts/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	
+	<!-- MiniColors -->
+	<script src="../../theme/scripts/jquery-miniColors/jquery.miniColors.js"></script>
+	
+	<!-- Select2 -->
+	<script src="../../theme/scripts/select2/select2.js"></script>
+	
+	<!-- Themer -->
+	<script>
+	var themerPrimaryColor = '#71c39a';
+	</script>
+	<script src="../../theme/scripts/jquery.cookie.js"></script>
+	<script src="../../theme/scripts/themer.js"></script>
+	
+	
+	
+	<!-- Resize Script -->
+	<script src="../../theme/scripts/jquery.ba-resize.js"></script>
+	
+	<!-- Uniform -->
+	<script src="../../theme/scripts/pixelmatrix-uniform/jquery.uniform.min.js"></script>
+	
+	<!-- Bootstrap Script -->
+	<script src="../../bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Bootstrap Extended -->
+	<script src="../../bootstrap/extend/bootstrap-select/bootstrap-select.js"></script>
+	<script src="../../bootstrap/extend/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js"></script>
+	<script src="../../bootstrap/extend/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
+	<script src="../../bootstrap/extend/jasny-bootstrap/js/jasny-bootstrap.min.js" type="text/javascript"></script>
+	<script src="../../bootstrap/extend/jasny-bootstrap/js/bootstrap-fileupload.js" type="text/javascript"></script>
+	<script src="../../bootstrap/extend/bootbox.js" type="text/javascript"></script>
+	<script src="../../bootstrap/extend/bootstrap-wysihtml5/js/wysihtml5-0.3.0_rc2.min.js" type="text/javascript"></script>
+	<script src="../../bootstrap/extend/bootstrap-wysihtml5/js/bootstrap-wysihtml5-0.0.2.js" type="text/javascript"></script>
+	
+	<!-- Custom Onload Script -->
+	<script src="../../theme/scripts/load.js"></script>
+	
+	<!-- Layout Options -->
+	<script src="../../theme/scripts/layout.js"></script>
+	
+	<!-- google-code-prettify -->
+	<script src="../../theme/scripts/google-code-prettify/prettify.js"></script>
+	<script>
+	$(function(){
+		prettyPrint();
+	});
+	</script>
+	
+</body>
+</html>
