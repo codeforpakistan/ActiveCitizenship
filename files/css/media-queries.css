@@ -1,0 +1,53 @@
+/* ---------------------------------------------------------------------- */
+/*	Version 1024px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 1024px) {
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 768px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 768px) {
+	/*gallery*/
+	#gallery .col {
+		float: none;
+		width: 100%;
+	}
+
+	.footer {
+		text-align: center !important;
+	}
+	
+	.btn-login input.span2, .btn-login textarea.span2, .btn-login .uneditable-input.span2 {
+		min-height: 24px!important
+	}
+	.pricing .item {
+	 	padding-top: 15px;
+	 	padding-bottom: 15px;
+	}	
+	
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 480px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 480px) {
+	header .input-prepend {
+		display: block !important;
+	}
+	.btn-login.show {
+		width: 169px;
+		height: auto;
+	}
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 320px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 320px) {
+}

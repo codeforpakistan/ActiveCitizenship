@@ -109,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('career_model','login_model','general_model','country_model','city_model','age_model','careertrack_model','education_model','experience_model','jobgroup_model','jobsector_model','jobtype_model','salaryrange_model','studytrack_model','jobsource_model','occupationgroup_model','fieldofwork_model','careertrack_model','occupation_model','organization_model','job_model','course_model','constituency_model','authorities_model');
+$autoload['model'] = array('career_model','login_model','general_model','country_model','city_model','age_model','careertrack_model','education_model','experience_model','jobgroup_model','jobsector_model','jobtype_model','salaryrange_model','studytrack_model','jobsource_model','occupationgroup_model','fieldofwork_model','careertrack_model','occupation_model','organization_model','job_model','course_model','constituency_model','authorities_model','area_model','reports_model');
 
 
 /* End of file autoload.php */

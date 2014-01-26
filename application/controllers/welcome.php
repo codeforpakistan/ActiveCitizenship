@@ -1693,6 +1693,105 @@ class Welcome extends CI_Controller {
 		}
 	}
 	
+	public function area($mode='view',$id=0)
+	{
+		$data['admin']=$this->session->userdata[0];
+		$data['view']="area";
+		$data['title']=" Welcome to Active Citizenship | Add Area";
+		$cities=$this->constituency_model->fetchActive();
+		
+		//print_r($country->result_array());
+		$arr['']="Select One";
+		foreach($cities->result_array() as $row) {
+			$arr[$row['constiuency_id']]=$row['constiuency_num'];
+		}
+		$data['constiuencies']=$arr;
+		$data['areas']=$this->area_model->fetchAll();
+		switch($mode)
+		{
+			case 'view':	
+					$data['subtitle']="Add Area";				
+					$data['title']=" Welcome to Active Citizenship | Add Area";					
+					//$data['method']='add';
+					$this->load->view('admin/dashboard',$data);
+				break;
+			case 'add':
+					// make entry
+					
+					//print_r($_POST); die;
+					$insertarray=$this->input->post();
+					//print_r($insertarray); die;
+					//$data['method']='add';
+					if(count($_POST)>0){
+						if(!$id){
+							$area_id=$this->general_model->save("area",$insertarray,true);
+						}else{
+								// customization for logo field if not selected
+								//if($data['area_logo']=="")
+								//	unset($data['area_logo']);
+								$this->general_model->update("area",$insertarray,"area_id=".$id);
+								$area_id=$id;
+						}
+						//echo $id;
+						if($area_id){							
+									
+									$data['view']="area";
+									$data['subtitle']="Add Area";	
+									$data['title']=" Welcome to Active Citizenship | Add Area";
+									$data['message']=" Record Entered Successfully";
+									$data['cities']=$this->area_model->fetchAll();		
+									$this->load->view('admin/dashboard', $data);
+									//redirect("welcome/area");
+								
+								
+						}
+					}else{
+							redirect("welcome/area");
+					}
+					// upload image
+						
+					// update entry with image
+					
+					//$data['subtitle']="Add Area";				
+					//$data['title']=" Welcome to Active Citizenship | Add Area";					
+					//$this->load->view('admin/dashboard',$data);
+				break;
+			 case 'delete':
+			 		if($this->area_model->deActiveArea($id))
+					{
+						redirect("welcome/area");
+					}
+			 	break;
+			case 'active':
+			 		if($this->area_model->ActiveArea($id))
+					{
+						redirect("welcome/area");
+					}
+			 	break;
+			case 'edit':
+				if($id){
+					$data['subtitle']="Update Area Data" ;				
+					$data['title']=" Welcome to Active Citizenship | Update  Area";					
+					
+					$area=$this->area_model->getAreaId($id);
+					$areafields=$this->db->get("area");
+					foreach ($areafields->list_fields() as $field)
+					{
+						$this->data[$field]=$areafields->$field;	
+					}
+					//$data['area_type']=$area->area_type;
+//					$data['city']=$area->city;
+//					$data['area_id']=$area->area_id;
+					
+					
+					//print_r($area);
+					$this->load->view('admin/dashboard',$data);
+				}
+				break;
+			
+		}
+	}
+	
 	public function authorities($mode='view',$id=0)
 	{
 		$data['admin']=$this->session->userdata[0];
@@ -1889,6 +1988,7 @@ class Welcome extends CI_Controller {
 			
 		}
 	}
+	
 	
 }
 

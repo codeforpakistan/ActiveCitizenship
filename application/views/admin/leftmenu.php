@@ -7,7 +7,8 @@
            <li><a href="<?php echo base_url()?>welcome/country"><span>Country</span></a></li>
         	 <li><a href="<?php echo base_url()?>welcome/city"><span>City</span></a></li>
               <li><a href="<?php echo base_url()?>welcome/constituency"><span>Consituents</span></a></li>
-               <li><a href="<?php echo base_url()?>welcome/authorities"><span>Consituents</span></a></li>
+               <li><a href="<?php echo base_url()?>welcome/authorities"><span>Authorities</span></a></li>
+               <li><a href="<?php echo base_url()?>welcome/area"><span>Areas</span></a></li>
           </ul>
         </li>
          <li class="hasSubmenu"> <a data-toggle="collapse" href="#general_options"><span>General</span></a>
